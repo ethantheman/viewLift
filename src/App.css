@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: #000;
+  height: 100%;
 }
 
 .App-header {
@@ -15,7 +16,6 @@
 .App-logo {
   height: 100%;
   width: 80%;
-  /*border: 1px solid red;*/
   grid-column-start: 1;
   grid-column-end: 2;
 }
@@ -60,7 +60,11 @@
 .gallery-photo {
   width: 100%;
   height: 50%;
-  opacity: .5;
+  opacity: .15;
+}
+
+.gallery-container {
+  margin-bottom: 5%;
 }
 
 #gallery-description {
@@ -84,6 +88,8 @@
   color: white;
   font-family: sans-serif;
   margin-left: 5%;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 .login {
@@ -98,14 +104,78 @@
 .category {
   width: 100%;
   height: 250px;
-  border: 1px solid blue;
+  border-top: 1px solid white;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+  margin-bottom: 5%;
+  left: 10%;
+  justify-content: space-between;
 }
+
+h3 {
+  position: relative;
+  color: #2b77f2;
+  float: left;
+  left: 3%;
+  font-family: sans-serif;
+}
+
+#category-prev {
+  position: relative;
+  height: 15%;
+  cursor: pointer;
+  float: left;
+  z-index: 1;
+  top: 50%;
+}
+
+#category-next {
+  position: relative;
+  height: 15%;
+  cursor: pointer;
+  float: right;
+  z-index: 1;
+  top: 50%;
+}
+
+.category-photo {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  height: 100%;
+  width: 95%;
+  margin-top: 5%;
+}
+
+.card:hover {
+  -moz-box-shadow:  0 0 50px #2b77f2;
+  -webkit-box-shadow: 0 0 50px #2b77f2;
+  box-shadow: 0 0 50px #2b77f2;
+  cursor: pointer;
+}
+
+footer {
+  border-top: 3px solid #2b77f2;
+  height: 150px;
+  background: grey;
+}
+
+.card:hover .play{display:block;}
+
+.play{
+  position : relative;
+  display:none;
+  top:40%;
+  height: 0;
+  left:0;
+  z-index:2;
+} 
 
 #prev {
   z-index: 1;
-/*  grid-column-start: 2;
-  grid-column-end: 3;*/
-  /*height: 100%;*/
   float: left;
   height: 100%;
   cursor: pointer;
@@ -113,9 +183,6 @@
 
 #next {
   z-index: 1;
-/*  grid-column-start: 4;
-  grid-column-end: 5;*/
-  /*height: 100%;*/
   float: right;
   height: 100%;
   cursor: pointer;
@@ -123,13 +190,13 @@
 
 #buttonContainer {
   position: absolute;
-  width: 50%;
+  width: 25%;
   height: 50px;
   display: table;
   margin: 0 auto;
   z-index: 2;
-  bottom: 5%;
-  left: 25%;
+  bottom: 15%;
+  left: 37.5%;
 }
 
 .App-intro {
