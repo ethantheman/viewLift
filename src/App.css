@@ -1,0 +1,142 @@
+.App {
+  text-align: center;
+  background-color: #000;
+}
+
+.App-header {
+  /*background-color: #000;*/
+  height: 15%;
+  padding: 2%;
+  color: white;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+}
+
+.App-logo {
+  height: 100%;
+  width: 80%;
+  /*border: 1px solid red;*/
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.header-text-1 {
+  font-family: Helvetica;
+  font-weight: bold;
+  grid-column-start: 2;
+  grid-column-end: 2.5;
+}
+.header-text-2 {
+  font-family: Helvetica;
+  font-weight: bold;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.header-text-3 {
+  font-family: Helvetica;
+  font-weight: bold;
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.filler {
+  grid-column-start: 5;
+  grid-column-end: 8;
+}
+
+.search {
+  height: 25px;
+  grid-column-start: 8;
+  grid-column-end: 9;
+}
+
+.gallery {
+  /*border: 1px solid red;*/
+  width: 100%;
+  height: 25%;
+  position: relative;
+}
+
+.gallery-photo {
+  width: 100%;
+  height: 50%;
+  opacity: .5;
+}
+
+#gallery-description {
+  font-weight: bold;
+  position: absolute;
+  font-size: 40px;
+  color: white;
+  bottom: 25%;
+  text-align: left;
+  margin-left: 5%;
+  width: 100%;
+}
+
+#watch {
+  position: absolute;
+  bottom: 20%;
+  float: left;
+  height: 5%;
+  width: 10%;
+  background: #008ee0;
+  color: white;
+  font-family: sans-serif;
+  margin-left: 5%;
+}
+
+.login {
+  font-family: Helvetica;
+  grid-column-start: 9;
+  grid-column-end: 10;
+}
+.App-title {
+  font-size: 1.5em;
+}
+
+.category {
+  width: 100%;
+  height: 250px;
+  border: 1px solid blue;
+}
+
+#prev {
+  z-index: 1;
+/*  grid-column-start: 2;
+  grid-column-end: 3;*/
+  /*height: 100%;*/
+  float: left;
+  height: 100%;
+  cursor: pointer;
+}
+
+#next {
+  z-index: 1;
+/*  grid-column-start: 4;
+  grid-column-end: 5;*/
+  /*height: 100%;*/
+  float: right;
+  height: 100%;
+  cursor: pointer;
+}
+
+#buttonContainer {
+  position: absolute;
+  width: 50%;
+  height: 50px;
+  display: table;
+  margin: 0 auto;
+  z-index: 2;
+  bottom: 5%;
+  left: 25%;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
