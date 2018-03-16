@@ -4,6 +4,7 @@ import prev from './images/prev.png';
 import next from './images/next.png';
 import search from './images/search.png';
 import git from './images/git.png'
+import loading from './images/loading.gif';
 import linkedin from './images/linkedin.png';
 import './App.css';
 const axios = require('axios');
@@ -12,6 +13,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      loading: true,
       films: null,
       idx: 0,
       swiping: true
@@ -29,6 +31,7 @@ class App extends Component {
   componentDidMount() {
     axios.get('http://www.snagfilms.com/apis/films.json?limit=10').then(obj => {
       this.setState({
+        loading: false,
         films: obj.data.films.film,
         categoryOne: obj.data.films.film.slice(0, 7),
         categoryTwo: obj.data.films.film.slice(0, 7),
@@ -100,7 +103,7 @@ class App extends Component {
   }
 
   render() {
-    return (
+    return this.state.loading ? <div className="App"><img className="loading" src={loading} alt="Loading..."/></div> : (
       <div className="App">
         <header className="App-header">
           <img src={icon} className="App-logo grid-item" alt="logo" />
@@ -140,7 +143,7 @@ class App extends Component {
         }) : null}<img src={next} id="category-next" onClick={this.threeNext}/></div>
         <footer>
           <div style={{"color":"white"}}>
-            <h4>Built in a rush by Ethan Lipkind</h4>
+            <h4>Built with love by Ethan Lipkind</h4>
           </div>
           <div>
             <a href="https://github.com/ethantheman" style={{"color":"white", "font-family": "sans-serif"}}>
