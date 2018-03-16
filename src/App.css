@@ -18,6 +18,7 @@
   width: 80%;
   grid-column-start: 1;
   grid-column-end: 2;
+  cursor: pointer;
 }
 
 .header-text-1 {
@@ -25,18 +26,21 @@
   font-weight: bold;
   grid-column-start: 2;
   grid-column-end: 2.5;
+  cursor: pointer;
 }
 .header-text-2 {
   font-family: Helvetica;
   font-weight: bold;
   grid-column-start: 3;
   grid-column-end: 4;
+  cursor: pointer;
 }
 .header-text-3 {
   font-family: Helvetica;
   font-weight: bold;
   grid-column-start: 4;
   grid-column-end: 5;
+  cursor: pointer;
 }
 
 .filler {
@@ -48,6 +52,7 @@
   height: 25px;
   grid-column-start: 8;
   grid-column-end: 9;
+  cursor: pointer;
 }
 
 .gallery {
@@ -99,6 +104,7 @@
   font-family: Helvetica;
   grid-column-start: 9;
   grid-column-end: 10;
+  cursor: pointer;
 }
 .App-title {
   font-size: 1.5em;
